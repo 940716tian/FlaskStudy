@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for foo in data %}
+    {% if loop.first %}
+        <span style="color: red">{{ foo }}</span>
+        {% elif loop.last %}
+        <span style="color: rebeccapurple">{{ foo }}</span>
+        {% else %}
+        <span>{{ foo }}</span>
+    {% endif %}
+
+{#    {% else %}#}
+{#    <h1>没数据</h1>#}
+{#    <a href="www.baidu.com">回去</a>#}
+
+{% endfor %}
+
+</body>
+</html>
