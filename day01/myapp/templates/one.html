@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='hello.css') }}">
+{#    <link rel="stylesheet" href="static/hello.css">#}
+</head>
+<body>
+杭州你好！ I like you !!
+<br>
+{{ msg }}
+<br>
+{{ data }}
+<br>
+    <span>呵呵呵a</span>
+    <a href="{{ url_for('hello.param',id=2) }}">跳转</a>
+</body>
+</html>
