@@ -2,8 +2,9 @@ from flask_script import Manager
 
 from myapp import create_app
 
-app = create_app()
-manage = Manager(app=app)
+app = create_app("debug")
+
+manager = Manager(app)
 
 if __name__ == "__main__":
-    manage.run()
+    manager.run()

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{ data | capitalize|reverse }}
+{#格式化#}
+{{ '%s is %d'| format ('hehe',250) }}
+{# 过滤标签 在单词首字母大写#}
+{{ html_str | striptags|title }}
+{{ hehe | default("我是默认值") }}
+<br>
+this is first data:{{ my_str | first }}
+<br>
+this is last data:{{ my_str | last }}
+<br>
+共计{{ my_arr | length }}个元素
+<br>
+和是{{ my_arr | sum }}
+<br>
+排序{{ my_arr | sort }}
+</body>
+</html>
