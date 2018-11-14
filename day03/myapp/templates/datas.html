@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查狗</title>
+</head>
+<body>
+    <ul>
+        {% for foo in dogs %}
+            <li>{{ foo.name }}的地址是{{ foo.place }}</li>
+        {% endfor %}
+
+    </ul>
+</body>
+</html>
