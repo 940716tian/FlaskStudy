@@ -13,18 +13,25 @@ def get_db_uri(conf):
     print(uri)
     return uri
 
+CACHES = {
+    "default":{'CACHE_TYPE':'redis',
+            'CACHE_REDIS_URL':'redis://127.0.0.1:6379/7'},
+    "debug":{'CACHE_TYPE':'redis',
+            'CACHE_REDIS_URL':'redis://127.0.0.1:6379/7'},
+}
+
 class Config:
     # 公共配置
     Debug = False,
     Test = False,
     Online = False,
-    SECRET_KEY = 'asdfgasgdasdgsadsdfgasdgffg',
+    SECRET_KEY = 'asdfghjkl;zxcvbn',
     SESSION_TYPE = 'redis',
     SESSION_KEY_PREFIX = 'myapp:',
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class DebugConfig(Config):
-    Debug = True,
+    DEBUG = True,
     SESSION_REDIS = StrictRedis(host='127.0.0.1',db=5)
     # 数据库配置
     DATABASE = {

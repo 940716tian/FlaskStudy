@@ -11,6 +11,7 @@ def create_app(env_name):
     app = Flask(__name__)
     # 各种配置
     app.config.from_object(conf.get(env_name))
+    print(conf.get(env_name))
     # 注册各种第三方的插件
     init_ext(app)
     # 注册蓝图
